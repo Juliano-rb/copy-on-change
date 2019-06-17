@@ -1,0 +1,14 @@
+{
+  "name": "copy-on-change",
+  "version": "1.0.0",
+  "description": "watchs for filechange (like build result) and put the new file in a specific location",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "juliano-rb",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}
