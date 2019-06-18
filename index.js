@@ -8,8 +8,12 @@ console.log(`Watching for file changes on ${fileToWatch}`);
 
 fs.watch(fileToWatch, (event, filename) => {
   if (filename) {
-    console.log(`${filename} file Changed, copying file to ${copyTo}`);
-
-    fs.copyFileSync(fileToWatch,`${copyTo}/${filename}`)
+    console.log(`${filename} file Changed, copying file to ${copyTo}.\n`);
+    
+    try {
+      fs.copyFileSync(fileToWatch,`${copyTo}/${filename}`)
+    } catch (error) {
+      console.log(`\nError ${error.code} copying..`)
+    }
   }
 });
